@@ -1,5 +1,11 @@
-
 *{
-	margin: 0px;
-	padding: 0px;
+	margin: 3px;
+	padding: 3px;
+}
+.blue{
+	color: blue;
+}
+
+h1{
+	color: red;
 }
