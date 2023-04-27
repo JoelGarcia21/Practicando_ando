@@ -1,11 +1,90 @@
 *{
-	margin: 3px;
-	padding: 3px;
+	margin: 0px;
+	padding: 0px;
 }
-.blue{
-	color: blue;
+body{
+	background-color: #bb9457
 }
 
-h1{
-	color: green;
+header h1{
+	text-align: center;
+	font-family: monospace, fantasy, sans-serif;
+	font-size: 50px;
+	color: #432818;
 }
+
+header img{
+	background: none;
+	display: block;
+	margin: auto;
+}
+
+.index{
+	margin-top: 20px;	
+}
+
+.index ul li{
+	display: flex;
+    justify-content: center;
+	
+}
+
+.consejos div ul > li {
+	display: inline-block;
+	width: 97%;
+	font-family: sans-serif;
+	font-size: 17px;
+	margin-bottom: 10px;
+	list-style: none;
+	margin-left: 15px;
+	padding-left: 10px;
+	background-color: #FFE6A7;
+}
+
+.consejos h3{
+	margin-top: 10px;
+	font-size: 28px;
+	margin-bottom: 18px;
+}
+
+.productos ul li{
+	margin-top:30px; 
+	text-align: center;
+	display: inline-block;
+	width: 400px;
+	height: 450px;
+	vertical-align: middle;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left: 35px;
+	background-color: #FFE6A7;
+	
+	
+}
+
+.productos ul li img{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.productos h2{
+	font-size: 45px;
+	text-align: center;
+}
+
+ a:link, a:visited{
+	color: black;
+	background-color: #FEFAE0;
+	border: 1px solid #6F1D1B;
+	display: block;
+	text-align: center;
+	width: 300px;
+	margin-bottom: 3px;
+}
+
+ a:hover, a:active{
+	background-color: #a98467;
+	color: #723D46;
+}
+
