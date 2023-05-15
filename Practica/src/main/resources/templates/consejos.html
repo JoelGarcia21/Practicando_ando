@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 	<head>
 		<meta charset="UTF-8">
-		<title>Consejos de salud</title>
-		<link rel="stylesheet" href="../static/css/estilos.css">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+	    <title th:text="${titulo}"></title>
 	</head>
 	<body>
-		<header id=inicio>
-			<h1>Tienda de mascotas pata de Oro</h1>
-			<img src="../static/images/logo.jpg" alt="Logo de tienda" title="Un logo con un perro y gato">
-		</header>
+		<header th:replace="~{layouts/header :: header}"></header>
+		<nav th:replace="~{layouts/nav :: nav}"></nav>
 		<section class="consejos">
 			<h3>Consejos de salud para cuidar a tu mascota:</h3>
 			<div>
@@ -24,20 +24,9 @@
 					<li>Proporciona un ambiente seguro: Mantén a tu mascota en un ambiente seguro y protegido, lejos de peligros potenciales como calles transitadas, cuerpos de agua y productos químicos peligrosos.</li>
 				</ul>
 			</div>	
-				<aside>
-				<h3>Tambien le puede interesar: </h3>
-				<ul>
-					<li><a href="https://www.royalcanin.es/articulos/alimentacion-y-nutricion-para-perros-y-gatos" target="_blank">Dieta equilibrada para mascotas.</a></li>
-					<li><a href="https://essentialspetcare.com/es/what-vaccines-do-dogs-need-yearly/" target="_blank">Vacunas para mascotas.</a></li>
-					<li><a href="https://www.rover.com/es/blog/guia-para-hacer-ejercicio-con-tu-perro-en-casa/" target="_blank">Ejercicio para mascotas.</a></li>
-					<li><a href="https://www.purina-latam.com/mx/purina/nota/perros/higiene-en-mascotas" target="_blank">Higiene para mascotas.</a></li>
-					<li><a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/articulos-potencialmente-peligrosos-para-su-mascota" target="_blank">Productos tóxicos para mascotas.</a></li>
-				</ul>
-				</aside>
-			<br>
-            <div>
-                <a href="index.html">Volver >> </a>
-            </div>   
+				<aside th:replace="~{layouts/aside :: aside}" class="content-aside"></aside>
+			<br> 
 		</section>
+		<footer th:replace="~{layouts/footer :: footer}"></footer>
 	</body>
 </html>
