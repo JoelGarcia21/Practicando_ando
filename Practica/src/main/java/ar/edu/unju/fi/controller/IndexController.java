@@ -20,4 +20,14 @@ public class IndexController {
 	public String getProductos() {
 		return "productos";
 	}
+	
+	@GetMapping("/paseos")
+	public String getPaseos() {
+		return "paseos";
+	}
+	
+	@GetMapping("/contactenos")
+		public String getContactenos() {
+			return "contactenos";
+		}
 }
