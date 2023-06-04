@@ -8,7 +8,7 @@
 	<div id="container-mid">
 		<section class="contactenos">
 
-			<form>
+			<form th:action="@{/guardar}" th:object="${comentario}" th:method="POST">
 
 				<h3> Contactenos</h3>
 				<p>3915 AV. General Belgrano, 388-4999999</p>
@@ -23,39 +23,33 @@
 				</ul>
 
 				<div>
-					<label for="nombre"> Nombre</label>
-					<input type="text" placeholder="ingrese su nombre" name="nombre" id="nombre">
-
-				</div>
-
-				<div>
-					<label for="email"> Email</label>
-					<input type="email" placeholder="ingrese su email " name="email" id="email">
-				</div>
-
-				<div>
-
-					<label for="ciudad"> Ciudad</label>
-					<input type="text" placeholder="ingrese ciudad " name="ciudad" id="ciudad">
-
-				</div>
-
-				<div>
-					<label for="mensaje"> Mensaje</label>
-					<textarea name="mensaje" id="mensaje">  </textarea>
-
-
-				</div>
-
-
-
-
-				<input class="boton" type="button" value="Enviar">
-
-			</form>
-		</section>
-		<aside th:replace="~{/layouts/aside :: aside}" class="content-aside"></aside>
-	</div>
+		            <label for="nombre">Nombre</label>
+		            <input type="text" placeholder="Ingrese su nombre" th:field="*{nombre}">
+		        </div>
+		
+		        <div>
+		            <label for="email">Email</label>
+		            <input type="email" placeholder="Ingrese su email" th:field="*{correo}">
+		        </div>
+		
+		        <div>
+		            <label for="ciudad">Ciudad</label>
+		            <input type="text" placeholder="Ingrese ciudad" th:field="*{ciudad}">
+		        </div>
+		
+		        <div>
+		            <label for="mensaje">Mensaje</label>
+		            <textarea name="mensaje" th:field="*{mensaje}"></textarea>
+		        </div>
+		
+		        <input class="boton" type="submit" value="Enviar">
+		
+				</form>
+					
+				</section>
+				
+				<aside th:replace="~{/layouts/aside :: aside}" class="content-aside"></aside>
+			</div>
 
 
 	<footer th:replace="~{/layouts/footer :: footer}" class="classefooter">

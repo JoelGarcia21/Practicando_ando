@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+	<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Comentarios</h1>
+    <ul>
+        <!-- Utiliza Thymeleaf para iterar sobre los comentarios -->
+        <li th:each="comentario : ${comentarios}">
+            <p><strong>Nombre:</strong> <span th:text="${comentario.nombre}"></span></p>
+            <p><strong>Corre:</strong> <span th:text="${comentario.correo}"></span></p>
+            <p><strong>Ciudad:</strong> <span th:text="${comentario.ciudad}"></span></p>
+            <p><strong>Mensaje:</strong> <span th:text="${comentario.mensaje}"></span></p>
+        </li>
+    </ul>
+	</body>
+</html>
