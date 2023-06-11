@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 </head>
 <body>
-    <footer th:fragment="footer" class="classefooter">
+    <footer th:fragment="footer" class="classefooter text-center">
         <p>Copyright 2023 - Tienda de mascotas pata de Oro - Diseñado por Grupo 17 - Jujuy - República Argentina</p>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.js}"></script>
+
+		<script>
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+		</script>
     </footer>
 </body>
 </html>

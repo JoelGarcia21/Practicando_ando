@@ -1,7 +1,14 @@
 package ar.edu.unju.fi.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import ar.edu.unju.fi.model.ContactenosModel;
+import jakarta.validation.Valid;
 
 @Controller
 public class IndexController {
@@ -11,10 +18,6 @@ public class IndexController {
 		return "index";
 	}
 	
-	@GetMapping("/consejos")
-	public String getConsejos() {
-		return "consejos";
-	}
 	
 	@GetMapping("/productos")
 	public String getProductos() {
@@ -27,7 +30,21 @@ public class IndexController {
 	}
 	
 	@GetMapping("/contactenos")
-		public String getContactenos() {
-			return "contactenos";
+		public String getContactenos(Model model) {
+		    model.addAttribute("contactenosModel", new ContactenosModel());
+		    return "contactenos";
+	}
+	
+	
+	@PostMapping("/enviar")
+	public String enviarFormulario(@ModelAttribute("contactenosModel") @Valid ContactenosModel contactenosModel,
+            BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+		return "contactenos";
 		}
+
+			// Procesar el formulario y enviar el mensaje
+
+		return "redirect:/contactenos";
+}
 }
