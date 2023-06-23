@@ -3,8 +3,11 @@ package ar.edu.unju.fi.list;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.edu.unju.fi.model.Consejos;
+import org.springframework.stereotype.Component;
 
+import ar.edu.unju.fi.entity.Consejos;
+
+@Component
 public class ListaConsejos {
 	private List<Consejos> consejos;
 	
